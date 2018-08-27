@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b27bc09b-1934-4808-88a4-4315941626d7">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     transactions.`ID` AS transactions_ID,
+     transactions.`OPP_ID` AS transactions_OPP_ID,
+     transactions.`OPP_TYPE` AS transactions_OPP_TYPE,
+     transactions.`TRN_VALUE` AS transactions_TRN_VALUE,
+     transactions.`TRN_DATE` AS transactions_TRN_DATE
+FROM
+     `transactions` transactions
+WHERE
+     ACC_ID = 1]]>
+	</queryString>
+	<field name="transactions_ID" class="java.lang.Integer"/>
+	<field name="transactions_OPP_ID" class="java.lang.Integer"/>
+	<field name="transactions_OPP_TYPE" class="java.lang.String"/>
+	<field name="transactions_TRN_VALUE" class="java.lang.Double"/>
+	<field name="transactions_TRN_DATE" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,13 @@
+create database bank;
+use bank;
+
+create table user (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50),
+    username VARCHAR(50) NOT NULL ,
+    password VARCHAR(50) NOT NULL,
+    token VARCHAR(30) NOT NULL
+);
+

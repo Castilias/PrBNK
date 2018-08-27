@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Transactions" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4a9f9e7f-0e65-424d-914e-7f3c20906701">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from transactions where acc_id=1]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ACC_ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OPP_ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OPP_TYPE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TRN_VALUE" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TRN_DATE" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="171" height="34" uuid="aead7527-7a86-40b0-b10f-ef5cd3981637"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transactions ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="20" uuid="91019ad7-8a09-4f4d-b65e-649798c53d2a"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Policredit Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="34" width="100" height="20" uuid="3cedd972-391e-40c8-a5fd-eecfb08436eb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Client Code:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="37" width="100" height="20" uuid="ea91dfa0-5316-4ae1-9f26-fb561853b2f7"/>
+				<textFieldExpression><![CDATA[$F{ACC_ID}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Transparent" x="4" y="0" width="551" height="79" backcolor="#CCCCCC" uuid="8064cb64-0412-49f2-b735-b07ae2eeb3cb"/>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-13" y="17" width="100" height="20" uuid="f7bde8f9-942d-4298-8644-b43d7082dec6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Transaction #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="17" width="100" height="20" uuid="ab911def-3631-4fa3-ab53-7f20d6769d9b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Operation Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="17" width="100" height="20" uuid="17062bfc-e204-4880-9dee-74ff7d6f0108"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Operation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="16" width="100" height="20" uuid="1c2d9d19-7281-462a-87a9-8acc5d1d710d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Transaction Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="16" width="100" height="20" uuid="74cbc315-9374-49a2-b43b-c194e8147479"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Transaction Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-11" y="48" width="568" height="1" uuid="44637a88-1014-44ab-8ef2-bc678f636a93"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="4" width="100" height="20" uuid="8a82bc1e-172b-4714-8baf-6056bd586215"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="4" width="100" height="20" uuid="298cd705-37b2-4d9d-bff2-5557ee0872c2"/>
+				<textFieldExpression><![CDATA[$F{OPP_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="4" width="100" height="20" uuid="906049b0-dc7a-41d3-a2cf-af807bbff291"/>
+				<textFieldExpression><![CDATA[$F{OPP_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="4" width="100" height="20" uuid="349d8b6e-7468-4c79-994e-516f17bc8a01"/>
+				<textFieldExpression><![CDATA[$F{TRN_VALUE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="4" width="100" height="20" uuid="7f0282ef-f7d3-4db7-ba2b-d7a930bb9860"/>
+				<textFieldExpression><![CDATA[$F{TRN_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="257" y="13" width="100" height="20" uuid="58a30a03-fdaa-4f02-b16b-7ccf7b54d23e"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
